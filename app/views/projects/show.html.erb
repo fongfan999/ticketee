@@ -2,4 +2,6 @@
 
 <h1><%= @project.name %></h1>
 <%= link_to "Edit Project", [:edit, @project] %>
+<%= link_to "Delete Project", @project, method: :delete,
+  data: { confirm: "Are you sure want to delete this project?" } %>
 <p><%= @project.description %></p>
