@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root "projects#index"
 
   resources :projects do
-    resources :tickets
+    resources :tickets, expect: [:index]
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
