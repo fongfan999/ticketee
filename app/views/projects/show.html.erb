@@ -5,9 +5,11 @@
   
   <ul class="actions">
     <li><%= link_to "Edit Project", [:edit, @project], class: "edit" %></li>
+    <% admins_only do %>
     <li><%= link_to "Delete Project", [:admin, @project], method: :delete,
       data: { confirm: "Are you sure want to delete this project?" },
       class: "delete" %></li>
+    <% end %>
   </ul>  
 </header>
 
