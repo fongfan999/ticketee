@@ -96,4 +96,14 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  # Shorten backtrace
+  config.backtrace_exclusion_patterns = [
+    /\/lib\d*\/ruby\//,
+    /org\/jruby\//,
+    /bin\//,
+    /gems/,
+    /spec\/spec_helper.rb/,
+    /lib\/rspec\/(core|expectations|matchers|mocks)/
+  ]
 end
