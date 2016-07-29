@@ -1,13 +1,13 @@
 <header>
   <h1>Users</h1>
 
-  <ul class="action">
+  <ul class="actions">
     <%= link_to "New User", new_admin_user_path, class: "new"  %>
   </ul>
 </header>
 
 <ul>
   <% @users.each do |user| %>
-    <li><%= link_to user.email, [:admin, user] %></li>
+    <li><%= link_to user, [:admin, user] %></li>
   <% end %>
 </ul>
