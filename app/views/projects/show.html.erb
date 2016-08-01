@@ -4,7 +4,9 @@
   <h1><%= @project.name %></h1>
   
   <ul class="actions">
-    <li><%= link_to "Edit Project", [:edit, @project], class: "edit" %></li>
+    <% if policy(@project).update? %>
+      <li><%= link_to "Edit Project", [:edit, @project], class: "edit" %></li>
+    <% end %>
     <% admins_only do %>
     <li><%= link_to "Delete Project", [:admin, @project], method: :delete,
       data: { confirm: "Are you sure want to delete this project?" },
