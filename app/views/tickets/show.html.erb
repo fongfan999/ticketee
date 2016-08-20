@@ -33,7 +33,7 @@
   <%= simple_format(@ticket.description) %>
 
   <% if @ticket.attachments.present? %>
-    <h4>Attachment</h4>
+    <h4>Attachments</h4>
     <div class="attachments">
       <% @ticket.attachments.each do |attachment| %>
         <p>
@@ -45,3 +45,15 @@
     </div>
   <% end %>
 </div>
+
+<div id="comments">
+  <% if @ticket.comments.persisted.any? %>
+    <%= render @ticket.comments.persisted %>
+  <% else %>
+    <p>There are no comments for this ticket.</p>
+  <% end %>
+</div>
+
+<% if policy(@comment).create? %>
+  <%= render "comments/form", ticket: @ticket, comment: @comment %>
+<% end %>
