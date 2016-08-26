@@ -22,6 +22,6 @@ private
   end
 
   def comment_params
-    params.require(:comment).permit(:text)
+    params.require(:comment).permit(:text, :state_id)
   end
 end
