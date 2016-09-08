@@ -25,6 +25,9 @@ Rails.application.routes.draw do
 
   resources :tickets, only: [] do
     resources :comments, only: [:create]
+    resources :tags, only: [] do
+      delete :remove, on: :member
+    end
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
