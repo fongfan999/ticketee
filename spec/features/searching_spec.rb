@@ -12,7 +12,7 @@ RSpec.feature "Users can search for tickets matching specific criteria" do
 
   let!(:ticket_2) do
     FactoryGirl.create(:ticket, name: "Create users", project: project,
-      author: user, tag_names: "interation_2")
+      author: user, tag_names: "interation_2", state: closed)
   end
 
   before do
@@ -33,6 +33,15 @@ RSpec.feature "Users can search for tickets matching specific criteria" do
   scenario "searching by state" do
     fill_in "Search", with: "state:Open"
     click_button "Search"
+    within("#tickets") do
+      expect(page).to have_link "Create projects"
+      expect(page).not_to have_link "Create users"
+    end
+  end
+
+  scenario "when clicking on a tag" do
+    click_link "Create projects"
+    click_link "interation_1"
     within("#tickets") do
       expect(page).to have_link "Create projects"
       expect(page).not_to have_link "Create users"
