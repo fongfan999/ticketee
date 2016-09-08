@@ -18,7 +18,9 @@ Rails.application.routes.draw do
   root "projects#index"
 
   resources :projects, only: [:index, :show, :edit, :update] do
-    resources :tickets, except: [:index]
+    resources :tickets, except: [:index] do
+      get :search, on: :collection
+    end
   end
 
   resources :attachments, only: [:show, :new]
