@@ -42,4 +42,9 @@ Rails.application.configure do
 
   # Raise params which are not permitted
   config.action_controller.action_on_unpermitted_parameters = :raise
+
+  # Set default mailer host
+  config.action_mailer.default_url_options = {
+    host: "ticketee.dev"
+  }
 end

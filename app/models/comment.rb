@@ -29,9 +29,9 @@ class Comment < ActiveRecord::Base
 
   def associate_tags_with_ticket
     if tag_names
-       tag_names.split.each do |name|
-         ticket.tags << Tag.find_or_create_by(name: name)
-       end
+     tag_names.split.uniq.each do |name|
+       ticket.tags << Tag.find_or_create_by(name: name)
+     end
     end
   end
 end
