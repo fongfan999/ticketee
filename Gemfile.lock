@@ -262,6 +262,7 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
+    pg (0.18.4)
     pkg-config (1.1.7)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
@@ -382,6 +383,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   pundit (~> 1.1)
   rails (= 4.2.6)
   rspec-rails (~> 3.5, >= 3.5.1)
