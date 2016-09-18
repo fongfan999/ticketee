@@ -42,6 +42,7 @@ gem 'pundit', '~> 1.1'
 gem 'carrierwave'
 gem 'searcher', github: 'radar/searcher'
 gem "fog"
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
