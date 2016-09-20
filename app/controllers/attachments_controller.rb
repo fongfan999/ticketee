@@ -20,7 +20,7 @@ class AttachmentsController < ApplicationController
     if URI.parse(attachment.file.url).scheme
       filename = "/tmp/#{attachment.attributes["file"]}"
       File.open(filename, "wb+") do |tf|
-        wf.write open(attachment.file.url).read
+        tf.write open(attachment.file.url).read
       end
       filename
     else
