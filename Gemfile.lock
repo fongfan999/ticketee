@@ -8,6 +8,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    AMS (0.99.0)
     CFPropertyList (2.3.3)
     actionmailer (4.2.6)
       actionpack (= 4.2.6)
@@ -376,6 +377,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  AMS (~> 0.99.0)
   bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug
   capybara (~> 2.7, >= 2.7.1)
