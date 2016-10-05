@@ -8,7 +8,6 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    AMS (0.99.0)
     CFPropertyList (2.3.3)
     actionmailer (4.2.6)
       actionpack (= 4.2.6)
@@ -29,6 +28,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_model_serializers (0.9.5)
+      activemodel (>= 3.2)
     activejob (4.2.6)
       activesupport (= 4.2.6)
       globalid (>= 0.3.0)
@@ -377,7 +378,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  AMS (~> 0.99.0)
+  active_model_serializers (~> 0.9.5)
   bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug
   capybara (~> 2.7, >= 2.7.1)
