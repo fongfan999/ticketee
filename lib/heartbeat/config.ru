@@ -12,5 +12,4 @@ app = Rack::Builder.app do
     run Heartbeat::TestApplication
   end
 end
-
 run app
