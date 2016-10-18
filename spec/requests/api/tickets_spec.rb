@@ -33,7 +33,7 @@ RSpec.describe "Tickets API" do
         get api_project_ticket_path(project, ticket, format: :json),
           {}, headers
         expect(response.status).to eq 403
-        error = { "error" => "Unauthorized" }
+        error = { "error" => "Forbidden" }
         expect(JSON.parse(response.body)).to eq error
       end
     end

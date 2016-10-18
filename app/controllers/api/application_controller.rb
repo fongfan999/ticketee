@@ -16,6 +16,6 @@ class API::ApplicationController < ApplicationController
   end
 
   def not_authorized
-    render json: { error: "Unauthorized" }, status: 403
+    render json: { error: "Forbidden" }, status: 403
   end
 end
