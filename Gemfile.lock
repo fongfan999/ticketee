@@ -401,7 +401,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   searcher!
-  selenium-webdriver
+  selenium-webdriver (~> 2.51)
   simple_form (~> 3.2, >= 3.2.1)
   spring
   sqlite3
